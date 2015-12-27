@@ -14,6 +14,11 @@ class Githud < Formula
 
   setup_ghc_compilers
 
+  bottle do
+    root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
+    sha256 "6a45e2d5beb78183555270b3ae4f639cb90b71c508426245e4a31b10db6300c3" => :el_capitan
+  end
+
   def install
     cabal_sandbox do
       cabal_install "--only-dependencies"
