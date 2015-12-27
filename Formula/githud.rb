@@ -15,7 +15,7 @@ class Githud < Formula
   setup_ghc_compilers
 
   bottle do
-    root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
+    root_url "https://raw.githubusercontent.com/gbataille/homebrew-gba/v1.0.0.0/Bottles"
     sha256 "6a45e2d5beb78183555270b3ae4f639cb90b71c508426245e4a31b10db6300c3" => :el_capitan
   end
 
