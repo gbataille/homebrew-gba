@@ -20,6 +20,9 @@ class Githud < Formula
 
   def install
     install_cabal_package
+  end
+
+  def post_install
     opoo "Some keys in the configuration file have changed. If you use the configuration file, please check it out"
   end
 
