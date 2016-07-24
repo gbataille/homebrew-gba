@@ -3,16 +3,16 @@ require "language/haskell"
 class Githud < Formula
   include Language::Haskell::Cabal
 
-  version_number = "1.3.2"
+  version_number = "1.3.3"
 
   desc "Clean git HUD for your prompt"
   homepage "https://github.com/gbataille/gitHUD"
   url "https://hackage.haskell.org/package/gitHUD-#{version_number}/gitHUD-#{version_number}.tar.gz"
-  sha256 "1ae533abaa42c6fdca5eef94cc0e94ae6712cf1fc1336486912dedb863c4fb06"
+  sha256 "c9868144e8fd72604a79cb6543d1099b931cdd8ce527319dd1f9294850d4b2d3"
 
   bottle do
-    root_url "https://raw.githubusercontent.com/gbataille/homebrew-gba/v#{version_number}/Bottles"
-    sha256 "124e4b4fb121025edeccfcf8da8fc553b50a2bda433c5e6bcbf33e413cc7606c" => :el_capitan
+    root_url "https://github.com/gbataille/homebrew-gba/blob/master/Bottles/githud-#{version_number}.el_capitan.bottle.tar.gz?raw=true"
+    sha256 "8d54c8d761e9f0d0d158f127f1afd7e52942f5059de9342e54715251dec1f03d" => :el_capitan
   end
 
   depends_on "ghc" => :build
@@ -20,10 +20,6 @@ class Githud < Formula
 
   def install
     install_cabal_package
-  end
-
-  def post_install
-    opoo "A new configuration key was introduced (merge_branch_ignore_branches). Check out the Changelog on github"
   end
 
   test do
