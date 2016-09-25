@@ -11,7 +11,7 @@ class Githud < Formula
   sha256 "7956019a42632f8658ba9a6508943fd212e9796657252eedec53f48850a07009"
 
   bottle do
-    root_url "https://github.com/gbataille/homebrew-gba/blob/master/Bottles"
+    root_url "https://github.com/gbataille/homebrew-gba/blob/master/Bottles/githud-#{version_number}.#{tag}.bottle.tar.gz?raw=true"
     sha256 "1f9f0d1cae6a40ddb1c1eb20a6c1c65cd362340477950b11ed182cd6d6bebee8" => :el_capitan
     sha256 "0564bbf7e12c723bfeacafe5e34831f42fa31744ef7631b40f55fd23d428a17d" => :sierra
   end
