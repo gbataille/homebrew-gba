@@ -13,7 +13,7 @@ class Githud < Formula
   bottle do
     root_url "https://github.com/gbataille/homebrew-gba/blob/master/Bottles"
     sha256 "1f9f0d1cae6a40ddb1c1eb20a6c1c65cd362340477950b11ed182cd6d6bebee8" => :el_capitan
-    sha256 "0564bbf7e12c723bfeacafe5e34831f42fa31744ef7631b40f55fd23d428a17d" => :sierra
+    sha256 "841e84ffcfb1ba5c289074f1a4365483b920bb793f34dee3537ceebcd6188753" => :sierra
   end
 
 
