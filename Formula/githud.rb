@@ -3,18 +3,17 @@ require "language/haskell"
 class Githud < Formula
   include Language::Haskell::Cabal
 
-  version_number = "2.0.0"
+  version_number = "2.0.2"
 
   desc "Clean git HUD for your prompt"
   homepage "https://github.com/gbataille/gitHUD"
   url "https://hackage.haskell.org/package/githud-#{version_number}/githud-#{version_number}.tar.gz"
-  sha256 "d1e7dee4dfe1798b8d9192fb504916283bb543faa68cbd42bdadedcd1113becd"
+  sha256 "68e653a7159a27db3bd7d5278c28ac38ee0266460b3524b11af6f7c3c098115a"
 
   bottle do
-    root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
-    sha256 "5102e212e878c49d14ac61b2da43847a419f8a6d50fde42d271b278bc6eee76b" => :high_sierra
+    cellar :any_skip_relocation
+    sha256 "b4c4be0b217415ab0021ece96729815ca062cc7573321466d2c468184f08c7c6" => :high_sierra
   end
-
 
   depends_on "ghc" => :build
   depends_on "cabal-install" => :build
