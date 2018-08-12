@@ -11,7 +11,7 @@ class Githud < Formula
   sha256 "9ebacc39f13a69ebe12949e795fb88324889ac9c07566743fc79d82388df40a6"
 
   bottle do
-    cellar :any_skip_relocation
+    root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
     sha256 "5b235e36c1a1cbf26bb131aa3f1dace2943e335e7bb6af9529ee30b4b8f788a9" => :high_sierra
   end
 
