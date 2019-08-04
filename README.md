@@ -31,7 +31,7 @@ brew bottle --force-core-tap Formula/githud.rb
 * Take the output of the above command and put it in `Formula/githud.rb` in place of the old
   `bottle` section
 * Make sure to preserve the `root_url` parameter of the `bottle` section
-* Move the generated `.bottle.tar.gz` file into the `Bottles` folder
+* Move the generated `.bottle.tar.gz` file into the `Bottles` folder (and check the bottle name!)
 * Commit
 * Push
 * Tag a release
