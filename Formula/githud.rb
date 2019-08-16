@@ -8,7 +8,7 @@ class Githud < Formula
   desc "Clean git HUD for your prompt"
   homepage "https://github.com/gbataille/gitHUD"
   url "https://hackage.haskell.org/package/githud-#{version_number}/githud-#{version_number}.tar.gz"
-  sha256 "19453a4665e1ea23ec63a1083aa08a767389757d47027ad30516f071d4580d6at"
+  sha256 "19453a4665e1ea23ec63a1083aa08a767389757d47027ad30516f071d4580d6a"
 
   bottle do
     root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
