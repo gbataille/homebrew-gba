@@ -1,25 +1,24 @@
 require "language/haskell"
 
 class Githud < Formula
-  include Language::Haskell::Cabal
-
-  version_number = "3.2.1"
+  version_number = "3.2.2"
 
   desc "Clean git HUD for your prompt"
   homepage "https://github.com/gbataille/gitHUD"
   url "https://hackage.haskell.org/package/githud-#{version_number}/githud-#{version_number}.tar.gz"
-  sha256 "0b571b1f065d68aaeb92a4cc5d352bf56bb22f21bfcfb26bb4dc53b5f9b178ef"
+  sha256 "e32942ceae27108dbab283cd790d42575512ae0ad1b317d080cdba8e0d0fe2a7"
 
   bottle do
     root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
-    sha256 "94352ec6eb8bef42717fca95ef6b450435b63af86e08e456551bd846fdf52fcc" => :catalina
+    sha256 "26f4794d8a6bb79dc3dcd3057d03a4c85c594fceef498c063b52efa717e35f38" => :catalina
   end
 
-  depends_on "ghc" => :build
+  depends_on "ghc@8.8" => :build
   depends_on "cabal-install" => :build
 
   def install
-    install_cabal_package
+    system "cabal", "v2-update"
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do
