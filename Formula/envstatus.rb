@@ -1,8 +1,4 @@
-require "language/haskell"
-
 class Envstatus < Formula
-  include Language::Haskell::Cabal
-
   version_number = "1.0.2"
 
   desc "Display contextual information efficiently"
@@ -15,11 +11,12 @@ class Envstatus < Formula
     sha256 "2650cee642de7fbc2038da024fd2c3705be1e8e9153955130928649208d90f75" => :mojave
   end
 
-  depends_on "ghc" => :build
+  depends_on "ghc@8.8" => :build
   depends_on "cabal-install" => :build
 
   def install
-    install_cabal_package
+    system "cabal", "v2-update"
+    system "cabal", "v2-install", *std_cabal_v2_args
   end
 
   test do

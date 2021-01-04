@@ -1,5 +1,3 @@
-require "language/haskell"
-
 class Githud < Formula
   version_number = "3.2.2"
 
