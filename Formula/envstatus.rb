@@ -8,11 +8,11 @@ class Envstatus < Formula
 
   bottle do
     root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
-    sha256 "2650cee642de7fbc2038da024fd2c3705be1e8e9153955130928649208d90f75" => :mojave
+    sha256 mojave: "2650cee642de7fbc2038da024fd2c3705be1e8e9153955130928649208d90f75"
   end
 
-  depends_on "ghc@8.8" => :build
   depends_on "cabal-install" => :build
+  depends_on "ghc@8.8" => :build
 
   def install
     system "cabal", "v2-update"

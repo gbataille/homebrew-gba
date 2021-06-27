@@ -8,11 +8,11 @@ class Githud < Formula
 
   bottle do
     root_url "https://github.com/gbataille/homebrew-gba/raw/master/Bottles"
-    sha256 "26f4794d8a6bb79dc3dcd3057d03a4c85c594fceef498c063b52efa717e35f38" => :catalina
+    sha256 catalina: "26f4794d8a6bb79dc3dcd3057d03a4c85c594fceef498c063b52efa717e35f38"
   end
 
-  depends_on "ghc@8.8" => :build
   depends_on "cabal-install" => :build
+  depends_on "ghc@8.8" => :build
 
   def install
     system "cabal", "v2-update"
