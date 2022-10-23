@@ -7,7 +7,10 @@ Find my tools (hopefully useful).
 This is currently a manual process.
 Describing the release of `githud`. Other tools follow the same logic.
 
-* Download the released .tar.gz source bundle
+* If you still have the `.tar.gz` archive that you have built locally, it's better.  
+  If not:
+  * Download the released .tar.gz source bundle from hackage
+
 * Compute its sha256 sum
 ```
 shasum -a 256 MY_FILE
@@ -22,11 +25,11 @@ brew uninstall githud
 ```
 * Install `githud` from the new formula, with the `--build-bottle` tag
 ```
-brew install --build-bottle Formula/githud.rb
+brew install --build-bottle ./Formula/githud.rb
 ```
 * Create the bottle
 ```
-brew bottle --force-core-tap Formula/githud.rb
+brew bottle --force-core-tap ./Formula/githud.rb
 ```
 * Take the output of the above command and put it in `Formula/githud.rb` in place of the old
   `bottle` section
